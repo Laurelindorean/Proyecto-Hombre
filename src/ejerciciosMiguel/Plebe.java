@@ -14,13 +14,12 @@ public class Plebe extends Personaje {
 	private String moral;
 	private int experiencia;
 
-	public Plebe(String nom, int vida, int ataque, int experiencia) {
-		super(nom, vida, ataque);
-		this.moral = this.generarMoral();
-		this.experiencia = experiencia;
+	public Plebe() {
+		super(Utils.getNombreAleatorio(), Utils.getNumeroAleatorio(20, 30), Utils.getNumeroAleatorio(5, 10));
+		experiencia = Utils.getNumeroAleatorio(20, 40);
+		moral = generarMoral();
 	}
-	
-	
+
 	private String generarMoral() {
 		String moral;
 		int aleatorio;
@@ -28,7 +27,7 @@ public class Plebe extends Personaje {
 		aleatorio = random.nextInt(2);
 		if (aleatorio == 0) {
 			moral = "Mala";
-		}else {
+		} else {
 			moral = "Buena";
 		}
 		return moral;
@@ -50,4 +49,9 @@ public class Plebe extends Personaje {
 		this.experiencia = experiencia;
 	}
 
+	@Override
+	public String toString() {
+		return "Plebe [nombre=" + super.getNombre() + ", vida=" + super.getVida() + ", ataque=" + super.getAtaque() + ",moral="
+				+ this.getMoral() + ", experiencia=" + this.getExperiencia() + "]";
+	}
 }

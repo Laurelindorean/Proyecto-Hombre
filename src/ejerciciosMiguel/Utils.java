@@ -17,4 +17,11 @@ public final class Utils {
 	public static String getNombreAleatorio() {
 		return ARRAY_NOMBRES[new Random().nextInt(ARRAY_NOMBRES.length)];
 	}
+	
+	public static int getNumeroAleatorio(int min, int max) {
+		int aleatorio;
+		Random random = new Random();
+		aleatorio = random.nextInt(max+1-min)+min;
+		return aleatorio;
+	}
 }
