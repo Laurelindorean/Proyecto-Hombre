@@ -5,10 +5,7 @@ package ejerciciosMiguel;
 
 import java.util.Random;
 
-/**
- * @author Miguel Á. Sastre <sastre113@gmail.com>
- * @Version 7 ago 2022
- */
+
 public final class Utils {
 
 	private static final String[] ARRAY_NOMBRES = { "Pepe", "Juan", "Miguel", "Mika", "Eva", "Miriam", "Gonzo", "Uruk",
@@ -24,4 +21,6 @@ public final class Utils {
 		aleatorio = random.nextInt(max+1-min)+min;
 		return aleatorio;
 	}
+	
+
 }

@@ -3,12 +3,9 @@
  */
 package ejerciciosMiguel;
 
-/**
- * @author Miguel Á. Sastre <sastre113@gmail.com>
- * @Version 6 ago 2022
- */
-public class Heroe extends Personaje {
 
+public class Heroe extends Personaje {
+	private static final int MIN_EXP = 30;
 	private int defensa;
 	private int level;
 	private int expActual;
@@ -20,6 +17,22 @@ public class Heroe extends Personaje {
 		this.level = 1;
 		this.expActual = 0;
 		this.vidaMax = 100;
+	}
+
+	public void curacion() {
+		int curacion = (int) (this.vidaMax * 0.5);
+		int newVida = 0;
+		if (this.getExpActual() >= MIN_EXP && super.getVida() < this.vidaMax) {
+			expActual -= MIN_EXP;
+			newVida = super.getVida() + curacion;
+			if (newVida > this.vidaMax) {
+				super.setVida(this.vidaMax);
+			} else {
+				super.setVida(newVida);
+			}		
+			//super.setVida((newVida > this.vidaMax) ? this.vidaMax : newVida); Operador ternario
+		}
+
 	}
 
 	public int getDefensa() {

@@ -4,7 +4,7 @@
 package ejerciciosMiguel;
 
 /**
- * @author Miguel Á. Sastre <sastre113@gmail.com>
+ * @author Miguel ï¿½. Sastre <sastre113@gmail.com>
  * @Version 6 ago 2022
  */
 public class Main {
@@ -22,6 +22,10 @@ public class Main {
 		Heroe hero1 = new Heroe("Frodo");
 		System.out.println(plebeyo1);
 		System.out.println(hero1);
+		hero1.setVida(30);
+		hero1.setExpActual(80);
+		hero1.curacion();
+		System.out.println(hero1.getVida());
 		/*for(int i = 0; i < villano1.getSubditos().length; i++) {
 			Plebe plebeyo = villano1.getSubditos()[i];
 			
