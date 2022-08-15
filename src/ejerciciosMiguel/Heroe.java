@@ -34,6 +34,25 @@ public class Heroe extends Personaje {
 		}
 
 	}
+	
+	/*
+	 * TODO Debe analizar la expActual. 
+	 *  Si expActual >= 100:
+	 *  1. Subirán sus estadísticas:
+	 * 		· Defensa = +2
+	 *      · Vida = +20
+	 *      · Ataque = +5
+	 *  2. Se curará al máximo de salud.
+	 *  3. Subirá en +1 level y deberá recalcular la experiencia
+	 *  	actual con la que se queda.
+	 *  	Ejemplo: Si gana 30 puntos de experiencia y tiene 90.
+	 *  		level = 1 --> level = 2
+	 *  		expActual = 90 --> expActual = 20
+	 * 
+	 */
+	public void subirNivel() {
+		
+	}
 
 	public void subirExp() {
 		while (this.expActual >= 100) {
