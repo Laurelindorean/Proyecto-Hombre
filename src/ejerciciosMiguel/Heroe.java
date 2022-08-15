@@ -3,7 +3,6 @@
  */
 package ejerciciosMiguel;
 
-
 public class Heroe extends Personaje {
 	private static final int MIN_EXP = 30;
 	private int defensa;
@@ -29,10 +28,22 @@ public class Heroe extends Personaje {
 				super.setVida(this.vidaMax);
 			} else {
 				super.setVida(newVida);
-			}		
-			//super.setVida((newVida > this.vidaMax) ? this.vidaMax : newVida); Operador ternario
+			}
+			// super.setVida((newVida > this.vidaMax) ? this.vidaMax : newVida); Operador
+			// ternario
 		}
 
+	}
+
+	public void subirExp() {
+		while (this.expActual >= 100) {
+			this.defensa += 2;
+			this.vidaMax += 20;
+			setAtaque(this.getAtaque() + 5);
+			setVida(this.vidaMax);
+			this.level += 1;
+			this.expActual -= 100;
+		}
 	}
 
 	public int getDefensa() {
